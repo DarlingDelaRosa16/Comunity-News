@@ -1,0 +1,45 @@
+#fullContainer{
+    margin-left: 5%;
+    width: 90%;
+}
+#containerSections{
+    width: 100%;
+    height: 65px;
+    border: 2px solid black;
+}
+#containerSlider{
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+    border: 2px solid black;
+}
+#containerComunities{
+    margin-top: 10px;
+    width: 100%;
+    height: 90px;
+    border: 2px solid black;
+}
+
+#containerNews{
+    display: grid;
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#containerTopics{
+    grid-column: 1/3;
+    height: 380px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+#containerAside{
+    grid-column: 3/4;
+    height: 380px;
+    margin-top: 10px;
+    margin-inline: 5px;
+    border: 2px solid black;
+}
