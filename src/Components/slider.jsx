@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Carousel,
   CarouselItem,
@@ -60,7 +61,6 @@ const Slider = () => {
   });
 
   return (
-    
         <Carousel
         activeIndex={activeIndex}
         next={next}
@@ -71,7 +71,6 @@ const Slider = () => {
         <CarouselControl id="fg" direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
         </Carousel>
-    
   );
 }
 
