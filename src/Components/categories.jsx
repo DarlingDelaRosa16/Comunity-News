@@ -1,12 +1,14 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 import '../Styles/categories.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faGamepad, faJournalWhills} from '@fortawesome/free-solid-svg-icons'
 
 const Categories = () => {
     return (
-        <div id="containerSections">
-            <Button color="dark">Video Juegos</Button>{'  '}
-            <Button color="dark"> Animes</Button>
+        <div className="containerSections">
+            <Button className="btnAnimation" color="dark"><FontAwesomeIcon icon={faGamepad} /> Video Juegos </Button>{'  '}
+            <Button className="btnAnimation" color="dark"><FontAwesomeIcon icon={faJournalWhills} /> Animes</Button>
         </div>
      );
 }

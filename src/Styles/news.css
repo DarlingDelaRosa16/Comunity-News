@@ -1,0 +1,7 @@
+.cardNews{
+    display: block;
+    transition: 100ms;
+}
+.cardNews:hover{
+    transform: scale(1.05, 1.05);
+}

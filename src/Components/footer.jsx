@@ -9,7 +9,7 @@ const Footer = () => {
             </div>
             <div className="containerInfoFooter" id="containerFotterLeft">
                 I want to say something to you. Very important.
-                Remenber Im the best beteween the bests.<br/>
+                Remenber Im the best between the bests.<br/>
                 <a href="#">Ingresar como usuario</a>
             </div>
         </div>

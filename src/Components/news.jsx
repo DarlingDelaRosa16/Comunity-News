@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, CardBody,
-    CardTitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText } from 'reactstrap'
+import '../Styles/news.css'
 
 const News = () => {
     return ( 
-      <div className="m-1" >
+      <div className="m-1 cardNews" >
         <Card>
           <CardBody className="row">
               <img width="20%" height="100px" className="col-md-4 " src="http://via.placeholder.com/200x100" alt="Card cap" />
