@@ -7,6 +7,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import '../Styles/slider.css'
 
 const items = [
   {
@@ -58,7 +59,7 @@ const Slider = () => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} width="98%" height="300px" className="mt-2 mx-2 rounded"/>
-        <CarouselCaption  captionText={item.title} captionHeader={item.caption} />
+        <CarouselCaption className="TextInSlider" captionText={item.title} captionHeader={item.caption} />
       </CarouselItem>
     );
   });
