@@ -44,7 +44,6 @@ const Slider = () => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.id}
-         
       >
         <img src={item.src}  style={styleImg} alt={item.altText} width="98%" height="300px" className="mt-2 mx-2 rounded"/>
         <CarouselCaption className="TextInSlider" captionText={item.title} captionHeader={item.caption} />

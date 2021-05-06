@@ -11,8 +11,8 @@ const News = () => {
     <div className="m-1" >
       {
         dataBaseInfo.map(item => (
-          <div className="cardNews">
-          <Card key={item.id}>
+          
+          <Card className="cardNews" key={item.id}>
             <CardBody className="row">
                 <img width="20%" height="100px" className="col-md-4 " src="http://via.placeholder.com/200x100" alt="Card cap" />
                 <div className="col-md-8">
@@ -21,7 +21,7 @@ const News = () => {
                 </div>
             </CardBody> 
           </Card>
-          </div>
+          
         ))
       }
     </div>

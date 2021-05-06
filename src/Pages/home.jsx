@@ -5,6 +5,7 @@ import News from '../Components/news'
 import Footer from '../Components/footer'
 import Publicity from '../Components/publicity'
 import MenuComunities from '../Components/menuComunities'
+
 import '../Styles/home.css'
 
 const Home = () => {
