@@ -6,12 +6,16 @@ const Footer = () => {
     return (
         <div id="containerFooter" >
             <div className="containerInfoFooter" id="containerFotterRigth">
-                Hello I'm Darling De La Rosa Vanderhorst.
+                Conoce nuestro trabajo en nuestro Instagram <b>@webdeveloment</b> y contactanos a nuestro email 
+                <b>Whatever@gmail.com</b> para la creaciones de aplicaciones web.
+                <br/><br/>
+                Quieres entrar a la comunidad de periodistas trabajando en nuestra pagina web
+                envianos tu CV a nuestro correo electronico <b>something@gmail.com</b> 
             </div>
             <div className="containerInfoFooter" id="containerFotterLeft">
-                I want to say something to you. Very important.
-                Remenber Im the best between the bests.<br/>
-                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Ingresar como usuario</a>
+                Si ya perteneces  nuestro equipo de periodistas inicia sesion con el correo correspondiente
+                y cuentanos a la comunidad que has enccontrado.
+                <br/>
                 <Modal/>
             </div>
             

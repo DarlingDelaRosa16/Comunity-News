@@ -1,21 +1,31 @@
 import React from 'react'
 import { Card, CardBody, CardTitle, CardText } from 'reactstrap'
 import '../Styles/news.css'
+import useFetchGet from '../Hooks/useFetchGet'
 
 const News = () => {
-    return ( 
-      <div className="m-1 cardNews" >
-        <Card>
-          <CardBody className="row">
-              <img width="20%" height="100px" className="col-md-4 " src="http://via.placeholder.com/200x100" alt="Card cap" />
-              <div className="col-md-8">
-              <CardTitle tag="h5">Special Title Treatment</CardTitle>
-              <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-              </div>
-          </CardBody> 
-        </Card>
-      </div>
-    );
+
+  const dataBaseInfo = useFetchGet(`http://localhost:3000/notices`)
+
+  return ( 
+    <div className="m-1" >
+      {
+        dataBaseInfo.map(item => (
+          <div className="cardNews">
+          <Card key={item.id}>
+            <CardBody className="row">
+                <img width="20%" height="100px" className="col-md-4 " src="http://via.placeholder.com/200x100" alt="Card cap" />
+                <div className="col-md-8">
+                <CardTitle tag="h5">Special Title Treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                </div>
+            </CardBody> 
+          </Card>
+          </div>
+        ))
+      }
+    </div>
+  );
 }
  
 export default News;

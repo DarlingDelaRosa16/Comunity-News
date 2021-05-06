@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react'
+import useFetchGet from '../Hooks/useFetchGet'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {
   Carousel,
   CarouselItem,
@@ -9,28 +10,11 @@ import {
 } from 'reactstrap';
 import '../Styles/slider.css'
 
-const items = [
-  {
-    src: 'https://i.imgur.com/xRC6Spm.jpg',
-    altText: "Xbox's control",
-    caption: "The magic of the game",
-    title: "Xbox say 'The xbox one will be finished on may 23th'"
-  },
-  {
-    src: 'https://i.imgur.com/bHKi5Sj.jpg',
-    altText: "Xbox's Control",
-    caption: 'The best console?',
-    title: "Xbox and his console can be the best"
-  },
-  {
-    src: 'https://i.imgur.com/g7ANxbq.jpg',
-    altText: 'Men whit inmersion glases',
-    caption: 'The new gamer glases are here',
-    title: "The best of the best"
-  }
-];
-
 const Slider = () => {
+
+  const dataBaseInfo = useFetchGet(`http://localhost:3000/sliderImages`)
+  const items = dataBaseInfo
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -51,14 +35,18 @@ const Slider = () => {
     setActiveIndex(newIndex);
   }
 
+  const styleImg = {
+    objectFit: 'cover'
+  }
   const slides = items.map((item) => {
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.id}
+         
       >
-        <img src={item.src} alt={item.altText} width="98%" height="300px" className="mt-2 mx-2 rounded"/>
+        <img src={item.src}  style={styleImg} alt={item.altText} width="98%" height="300px" className="mt-2 mx-2 rounded"/>
         <CarouselCaption className="TextInSlider" captionText={item.title} captionHeader={item.caption} />
       </CarouselItem>
     );
