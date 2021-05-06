@@ -1,11 +1,13 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useReducer } from 'react'
+import StoreReducer, { initialStore } from './storeReducer';
 
 const CategoryContext = createContext();  
 
 const CategoryProvider = ( {children} ) => {
-    const user = 2
+    const [state, dispatch] = useReducer(StoreReducer, initialStore)
+    
     return (
-        <CategoryContext.Provider value={user}>
+        <CategoryContext.Provider value={[state, dispatch]}>
             {children}
         </CategoryContext.Provider>
     );
