@@ -5,10 +5,10 @@ import useFetchGet from '../Hooks/useFetchGet'
 
 const MenuComunities = () => { 
 
-    const user = useContext(CategoryContext)
-    console.log(user)
+    const [state, dispatch] = useContext(CategoryContext)
 
-    const dataBaseInfo = useFetchGet(`http://localhost:3000/Comunities`)
+    const dataBaseInfo = useFetchGet(`http://localhost:3000/Comunities?categoryId=${state.categoryCustomButton.categoryId}`)
+   
     return (
         <div id="containerMenuComunities">
             {

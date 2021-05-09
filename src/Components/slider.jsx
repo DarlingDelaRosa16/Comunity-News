@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import useFetchGet from '../Hooks/useFetchGet'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {
@@ -9,10 +9,14 @@ import {
   CarouselCaption
 } from 'reactstrap';
 import '../Styles/slider.css'
+import CategoryContext from '../Contexs/categoryContext';
 
 const Slider = () => {
 
-  const dataBaseInfo = useFetchGet(`http://localhost:3000/sliderImages`)
+  
+  const [state, dispatch] = useContext(CategoryContext)  
+
+  const dataBaseInfo = useFetchGet(`http://localhost:3000/sliderImages?categoryId=${state.categoryCustomButton.categoryId}`)
   const items = dataBaseInfo
 
   const [activeIndex, setActiveIndex] = useState(0);

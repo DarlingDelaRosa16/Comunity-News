@@ -5,18 +5,17 @@ import News from '../Components/news'
 import Footer from '../Components/footer'
 import Publicity from '../Components/publicity'
 import MenuComunities from '../Components/menuComunities'
-
 import '../Styles/home.css'
 
 const Home = () => {
     return (    
-        <div id="fullContainer">
-            <div>
+    <div id="fullContainer">
+        <div>
             <Categories/>
-            </div>
-            <div id="containerInfoBackground">
-                <Slider/>
-                <div id="containerNews">
+        </div>
+        <div id="containerInfoBackground">
+            <Slider/>
+            <div id="containerNews">
                 <div id="containerMenu">
                     <MenuComunities/>
                 </div>
@@ -26,11 +25,11 @@ const Home = () => {
                 <div id="containerAside">
                     <Publicity/>
                 </div>
-                </div>
             </div>
-            <div>
+        </div>
+        <div>
             <Footer/>
-            </div>
+        </div>
     </div>
         
     );

@@ -10,13 +10,12 @@ const initialStore = {
 }
 
 const StoreReducer = (state, action) => {
-    switch(action.type){
-        case types.categoryChange:
-            return{
-                categoryCustomButton: action.changedCategory
-            }
-        default:
-            return state
+    if (action.type === types.categoryChange) {
+        return{
+            categoryCustomButton: action.changedCategory
+        }
+    }else{
+        return state
     }
 }
 export {initialStore, types}

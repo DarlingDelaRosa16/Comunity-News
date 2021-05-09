@@ -5,7 +5,6 @@ const CategoryContext = createContext();
 
 const CategoryProvider = ( {children} ) => {
     const [state, dispatch] = useReducer(StoreReducer, initialStore)
-    
     return (
         <CategoryContext.Provider value={[state, dispatch]}>
             {children}

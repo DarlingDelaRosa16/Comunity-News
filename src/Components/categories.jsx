@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import useFetchGet from '../Hooks/useFetchGet'
 import { Button } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,19 +12,19 @@ import { types } from '../Contexs/storeReducer'
 const Categories = () => {
     const dataBaseInfo = useFetchGet(`http://localhost:3000/Category`);
     
-    const [state, dispatch] = useContext(CategoryContext)
-
+    const [state, dispatch] = useContext(CategoryContext)  
+    
     return (
         <div className="containerSections">
             {
                 dataBaseInfo.map(item => (
-                    <Button onClick={()=> dispatch({
-                        type: types.categoryChange, 
-                        changedCategory: { categoryId: item.id, categoryName: item.name}
-                    })} 
-                    key={item.id} className="btnAnimation" color="dark"> {item.name}
-                    
-                     </Button>
+                    <Button 
+                        onClick={()=> dispatch({
+                            type: types.categoryChange, 
+                            changedCategory: { categoryId: item.id, categoryName: item.name}
+                        })} 
+                        key={item.id} className="btnAnimation"> {item.name}
+                    </Button>
                 )) 
             }
 
