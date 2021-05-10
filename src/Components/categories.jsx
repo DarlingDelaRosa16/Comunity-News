@@ -21,7 +21,7 @@ const Categories = () => {
                     <Button 
                         onClick={()=> dispatch({
                             type: types.categoryChange, 
-                            changedCategory: { categoryId: item.id, categoryName: item.name}
+                            changedCategory: { categoryId: item.id}
                         })} 
                         key={item.id} className="btnAnimation"> {item.name}
                     </Button>

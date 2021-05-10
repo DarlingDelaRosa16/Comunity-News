@@ -1,22 +1,33 @@
 const types = {
-    categoryChange : "category - Change"
+    categoryChange : "category - Change",
+    comunityChange : "comunity - Change"
 }
 
 const initialStore = {
     categoryCustomButton:{
-        categoryId: 1,
-        categoryName: 'VideoJuego'
+        categoryId: 1
+    },
+    comunityCustomButton:{
+        comunityId: null
     }
 }
 
 const StoreReducer = (state, action) => {
-    if (action.type === types.categoryChange) {
-        return{
-            categoryCustomButton: action.changedCategory
-        }
-    }else{
-        return state
+    switch(action.type){
+        case types.categoryChange:
+            return {
+                ...state,
+                categoryCustomButton: action.changedCategory
+            }
+        case types.comunityChange:
+            return {
+                ...state,
+                comunityCustomButton: action.changedComunity
+            }
+        default:
+            return state
     }
+    
 }
 export {initialStore, types}
 export default StoreReducer;

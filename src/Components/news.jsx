@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Card, CardBody, CardTitle, CardText } from 'reactstrap'
 import '../Styles/news.css'
 import useFetchGet from '../Hooks/useFetchGet'
+import CategoryContext from '../Contexs/categoryContext'
 
 const News = () => {
 
-  const dataBaseInfo = useFetchGet(`http://localhost:3000/notices`)
+  
+  const [state, dispatch] = useContext(CategoryContext)
+
+  const dataBaseInfo = useFetchGet(`http://localhost:3000/notices?comunityId=${state.comunityCustomButton.comunityId}`)
 
   return ( 
     <div className="m-1" >

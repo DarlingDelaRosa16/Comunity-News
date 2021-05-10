@@ -1,7 +1,9 @@
 import React, {useContext} from 'react'
 import CategoryContext  from '../Contexs/categoryContext'
 import '../Styles/menuComunities.css'
+import { Button } from 'reactstrap'
 import useFetchGet from '../Hooks/useFetchGet'
+import { types } from '../Contexs/storeReducer'
 
 const MenuComunities = () => { 
 
@@ -13,9 +15,14 @@ const MenuComunities = () => {
         <div id="containerMenuComunities">
             {
                 dataBaseInfo.map(item => (
-                    <button key={item.id} className="btn btn-dark col-auto" >
+                    <Button 
+                    onClick={()=> dispatch({
+                        type: types.comunityChange,
+                        changedComunity: { comunityId: item.id}
+                    })}
+                    key={item.id} className="btn btn-dark col-auto" >
                         {item.name}
-                    </button>
+                    </Button>
                 ))
             }
         </div>
