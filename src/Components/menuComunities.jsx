@@ -16,11 +16,12 @@ const MenuComunities = () => {
             {
                 dataBaseInfo.map(item => (
                     <Button 
-                    onClick={()=> dispatch({
-                        type: types.comunityChange,
-                        changedComunity: { comunityId: item.id}
-                    })}
-                    key={item.id} className="btn btn-dark col-auto" >
+                        onClick={()=> dispatch({
+                            type: types.comunityChange,
+                            changedComunity: { comunityId: item.id}
+                        })}
+                        key={item.id} className="btn btn-dark col-auto" 
+                    >
                         {item.name}
                     </Button>
                 ))

@@ -19,10 +19,16 @@ const Categories = () => {
             {
                 dataBaseInfo.map(item => (
                     <Button 
-                        onClick={()=> dispatch({
-                            type: types.categoryChange, 
-                            changedCategory: { categoryId: item.id}
-                        })} 
+                        onClick={()=> dispatch(
+                            {
+                                type: types.categoryChange, 
+                                changedCategory: { categoryId: item.id}
+                            }, dispatch({
+                                type: types.comunityChange,
+                                changedComunity: { comunityId: null}
+                            })
+
+                        )} 
                         key={item.id} className="btnAnimation"> {item.name}
                     </Button>
                 )) 
