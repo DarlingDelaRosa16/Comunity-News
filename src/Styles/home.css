@@ -30,13 +30,11 @@
     grid-column: 1/4;
     min-height: 380px;
     margin: 10px 0px 10px 5px;
-    border: 1px solid black;
     border-radius: 3px;
 }
 #containerAside{
     grid-column: 4/5;
     min-height: 380px;
     margin: 10px 5px 10px 5px;
-    border: 1px solid black;
     border-radius: 3px;
 }

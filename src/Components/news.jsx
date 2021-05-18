@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 
 const News = () => {
 
-  
   const [state, dispatch] = useContext(CategoryContext)
 
   var urlRequest = '';
@@ -20,11 +19,11 @@ const News = () => {
   const dataBaseInfo = useFetchGet(urlRequest)
 
   return ( 
-    <div className="m-1" >
+    <div>
       {
         dataBaseInfo.map(item => (
           <Link 
-            to={`/notice/:${item.id}`} 
+            to={`/notice/${item.id}`} 
             key={item.id}
             style={{textDecoration: 'none', color: 'black'}}
           >
