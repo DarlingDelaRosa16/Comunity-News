@@ -22,10 +22,10 @@ const Categories = () => {
                         onClick={()=> dispatch(
                             {
                                 type: types.categoryChange, 
-                                changedCategory: { categoryId: item.id}
+                                changedCategory: { categoryId: item.id, categoryName: item.name}
                             }, dispatch({
                                 type: types.comunityChange,
-                                changedComunity: { comunityId: null}
+                                changedComunity: { comunityId: null, comunityName: null}
                             })
 
                         )} 

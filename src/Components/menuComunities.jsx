@@ -8,7 +8,6 @@ import { types } from '../Contexs/storeReducer'
 const MenuComunities = () => { 
 
     const [state, dispatch] = useContext(CategoryContext)
-
     const dataBaseInfo = useFetchGet(`http://localhost:3000/Comunities?categoryId=${state.categoryCustomButton.categoryId}`)
    
     return (
@@ -18,7 +17,7 @@ const MenuComunities = () => {
                     <Button 
                         onClick={()=> dispatch({
                             type: types.comunityChange,
-                            changedComunity: { comunityId: item.id}
+                            changedComunity: { comunityId: item.id, comunityName: item.name}
                         })}
                         key={item.id} className="btn btn-dark col-auto" 
                     >

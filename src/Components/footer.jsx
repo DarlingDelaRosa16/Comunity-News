@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Styles/footer.css'
-import Modal from './modal'
 
 const Footer = () => {
     return (
@@ -16,7 +15,6 @@ const Footer = () => {
                 Si ya perteneces  nuestro equipo de periodistas inicia sesion con el correo correspondiente
                 y cuentanos a la comunidad que has enccontrado.
                 <br/>
-                <Modal/>
             </div>
             
         </div>

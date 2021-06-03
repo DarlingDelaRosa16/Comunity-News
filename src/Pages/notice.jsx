@@ -1,8 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import useFetchGet from '../Hooks/useFetchGet'
-import '../Styles/notice.css'
 import Publicity from '../Components/publicity'
+import '../Styles/notice.css'
+import Parse from 'html-react-parser'
 
 const Notice = () => {
 
@@ -28,8 +29,8 @@ const Notice = () => {
             <div id="infoContainer">
 
                 <div className="noticeInfo" >
-                    <h3 className="mb-3"> {dataBaseInfo.title} </h3>
-                    <p> {dataBaseInfo.description} </p>
+                    <div className="mb-3"> {dataBaseInfo.title} </div>
+                    {Parse("" + dataBaseInfo.description)}
                     <h6 id="dataNotice">{dataBaseInfo.date} <br /> {dataBaseInfo.journalistName}</h6> 
                 </div>
 

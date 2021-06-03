@@ -1,0 +1,8 @@
+#boxCategories{
+    width: 230px;
+    border: 1px solid black;
+    background-color: cadetblue;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}

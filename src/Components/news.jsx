@@ -4,6 +4,8 @@ import '../Styles/news.css'
 import useFetchGet from '../Hooks/useFetchGet'
 import CategoryContext from '../Contexs/categoryContext'
 import { Link } from 'react-router-dom'
+import Modal from './modal'
+import Parse from 'html-react-parser'
 
 const News = () => {
 
@@ -37,14 +39,17 @@ const News = () => {
                     src={item.img} alt="Card cap"
                   />
                   <div className="col-md-8">
-                  <CardTitle tag="h5">{item.title}</CardTitle>
-                  <CardText>{item.description.substring(0, 145)}...</CardText>
+                    <CardTitle tag="h5">{item.title}</CardTitle>
+                    <div>{Parse(item.description.substring(0, 145))}...</div>
                   </div>
               </CardBody> 
             </Card>
           </Link>
         ))
       }
+      <div id="contentButtonModal" >
+        <Modal/>
+      </div>
     </div>
   );
 }

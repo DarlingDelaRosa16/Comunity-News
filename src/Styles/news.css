@@ -5,3 +5,6 @@
 .cardNews:hover{
     transform: scale(1.02, 1.02);
 }
+#contentButtonModal{
+    text-align: end;
+}
