@@ -14,7 +14,7 @@ import CategoryContext from '../Contexs/categoryContext';
 const Slider = () => {
 
   
-  const [state, dispatch] = useContext(CategoryContext)  
+  const [state, /*dispatch*/] = useContext(CategoryContext)  
 
   const dataBaseInfo = useFetchGet(`http://localhost:3000/sliderImages?categoryId=${state.categoryCustomButton.categoryId}`)
   const items = dataBaseInfo

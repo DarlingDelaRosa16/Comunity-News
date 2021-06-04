@@ -33,7 +33,7 @@ const CreateNewComunity = () => {
                     nameForm:"categoryId",
                     placeholderForm: "Categoria Perteneciente",
                     typeForm: "text",
-                    labelForm: "Categoria",
+                    labelForm: "Numero de Categoria",
                     isValueRequirement: true,
                     onlyRead: false
                 }

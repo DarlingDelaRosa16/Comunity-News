@@ -12,7 +12,7 @@ import { types } from '../Contexs/storeReducer'
 const Categories = () => {
     const dataBaseInfo = useFetchGet(`http://localhost:3000/Category`);
     
-    const [state, dispatch] = useContext(CategoryContext)  
+    const [/*state*/, dispatch] = useContext(CategoryContext)  
     
     return (
         <div className="containerSections">

@@ -12,7 +12,7 @@ const ModalInfo = () => {
   const [modal, setModal] = useState(false);
   const [nestedModal, setNestedModal] = useState(false);
   const [closeAll, setCloseAll] = useState(false);
-  const [state, dispatch] = useContext(CategoryContext) 
+  const [/*state*/, dispatch] = useContext(CategoryContext) 
 
   const toggle = () => setModal(!modal);
   const toggleNested = () => {

@@ -9,7 +9,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
 const NewNotice = () => {
 
-    const [state, dispatch] = useContext(CategoryContext)
+    const [state, /*dispatch*/] = useContext(CategoryContext)
     const [response, setResponse] = useState(['',''])
     const [textData, settextData] = useState('')
     const { register, handleSubmit, formState: { errors }} = useForm();
@@ -72,7 +72,7 @@ return (
                 <input 
                     name="date"
                     type="text"
-                    defaultValue={new Date} 
+                    defaultValue={new Date()} 
                     readOnly 
                     {...register('date')} 
                 />

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Card, CardBody, CardTitle, CardText } from 'reactstrap'
+import { Card, CardBody, CardTitle } from 'reactstrap'
 import '../Styles/news.css'
 import useFetchGet from '../Hooks/useFetchGet'
 import CategoryContext from '../Contexs/categoryContext'
@@ -9,7 +9,7 @@ import Parse from 'html-react-parser'
 
 const News = () => {
 
-  const [state, dispatch] = useContext(CategoryContext)
+  const [state, /*dispatch*/] = useContext(CategoryContext)
 
   var urlRequest = '';
   if(state.comunityCustomButton.comunityId === null){

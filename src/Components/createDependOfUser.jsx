@@ -7,9 +7,9 @@ import CreateNewComunity from './createNewComunity'
 
 const CreateDependOfUser = () => {
 
-    const [state, dispatch] = useContext(CategoryContext) 
+    const [state, /*dispatch*/] = useContext(CategoryContext) 
 
-    if(state.logInUser.id == 1){
+    if(state.logInUser.id === 1){
         return ( 
             <div>
                 <CreateNewCategory/>
