@@ -8,3 +8,27 @@
 #contentButtonModal{
     text-align: end;
 }
+
+
+/*///////////////////////////////////////////////////////
+////////////////////////MEDIA QUERIES////////////////////
+////////////////////////////////////////////////////////*/
+
+@media(max-width: 770px){
+    .cardNews{
+        transition: 0;
+    }
+    .cardNews:hover{
+        transform: 0;
+    }
+    .littleDescription{
+        padding: 0;
+    }
+    .imgNews{
+        padding: 0;
+        margin-bottom: 3px;
+    }
+    .card-body{
+        padding: 10px; 
+    }
+} 

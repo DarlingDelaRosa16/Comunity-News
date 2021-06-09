@@ -1,6 +1,7 @@
 .btn{
     color: white;
     margin: 2px;
+    font-size: 16px;
     background: linear-gradient(#fff,#000);
 }
 #containerMenuComunities{
@@ -11,3 +12,17 @@
     padding: 10px;
 }
 
+/*///////////////////////////////////////////////////////
+////////////////////////MEDIA QUERIES////////////////////
+////////////////////////////////////////////////////////*/
+
+@media (max-width: 480px){
+    .btn{
+        font-size: 13.5px;
+    }
+    #containerMenuComunities{
+        margin: 5px 5px 0px 5px;
+        padding: 0;
+        min-height: 45px;
+    }
+}  

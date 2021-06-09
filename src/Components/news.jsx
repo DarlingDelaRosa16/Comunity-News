@@ -30,17 +30,17 @@ const News = () => {
             style={{textDecoration: 'none', color: 'black'}}
           >
             <Card className="cardNews" >
-              <CardBody className="row">
+              <CardBody className="row m-0">
                   <img
                     style={{objectFit: 'cover'}}
                     width="20%" 
                     height="150px"
-                    className="col-md-4 "
+                    className="col-md-4 imgNews"
                     src={item.img} alt="Card cap"
                   />
-                  <div className="col-md-8">
+                  <div className="col-md-8 littleDescription">
                     <CardTitle tag="h5">{item.title}</CardTitle>
-                    <div>{Parse(item.description.substring(0, 145))}...</div>
+                    <div >{Parse(item.description.substring(0, 145)+ "...")}</div>
                   </div>
               </CardBody> 
             </Card>

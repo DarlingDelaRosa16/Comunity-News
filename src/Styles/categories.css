@@ -40,3 +40,22 @@
     }  
 
 }
+    /*///////////////////////////////////////////////////////
+    ////////////////////////MEDIA QUERIES////////////////////
+    ////////////////////////////////////////////////////////*/
+
+@media(max-width:480px){
+    .containerSections{
+        padding: 3px;
+        min-height: 50px;
+    }
+} 
+@media(max-width: 770px){
+    .containerSections{
+        border-radius: 0;
+    }
+}   
+
+
+
+

@@ -11,7 +11,7 @@
 
 .containerInfoFooter{
     width: 95%;
-    min-height: 180px;
+    min-height: 130px;
     border-radius: 4px;
     box-shadow: inset 0px 1px 4px 1px #777;
     padding: 15px;
@@ -26,3 +26,17 @@
 #containerFotterLeft{
     grid-column: 3/4;
 }
+
+/*///////////////////////////////////////////////////////
+////////////////////////MEDIA QUERIES////////////////////
+////////////////////////////////////////////////////////*/
+
+@media(max-width: 770px){
+    #containerFotterRigth{
+        grid-column: 1/4;
+    }
+    #containerFotterLeft{
+        grid-column: 1/4;
+        margin-left: 2%;
+    }
+}  

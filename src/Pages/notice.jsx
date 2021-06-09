@@ -14,22 +14,13 @@ const Notice = () => {
         <div id="noticeFullContainer">
             <div 
                 id="noticeImg" 
-                style={
-                    {
-                        backgroundImage: `url(${dataBaseInfo.img})`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundSize: 'cover',
-                        backgroundPositionY: '-200px',
-                        backgroundAttachment: 'fixed'             
-                    }
-                }>
-            
+                style={{ backgroundImage: `url(${dataBaseInfo.img})` }}>
             </div>
             
             <div id="infoContainer">
 
                 <div className="noticeInfo" >
-                    <div className="mb-3"> {dataBaseInfo.title} </div>
+                    <div className="mb-3"> <h3>{dataBaseInfo.title}</h3> </div>
                     {Parse("" + dataBaseInfo.description)}
                     <h6 id="dataNotice">{dataBaseInfo.date} <br /> {dataBaseInfo.journalistName}</h6> 
                 </div>

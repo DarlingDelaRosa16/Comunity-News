@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './Pages/home'
 import Notice from './Pages/notice'
-import './App.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { CategoryProvider } from './Contexs/categoryContext';
 

@@ -3,7 +3,6 @@ import axios from 'axios'
 import {Button, FormGroup, Form, Label} from 'reactstrap'
 import { useForm } from "react-hook-form"
 import CategoryContext from '../Contexs/categoryContext'
-import '../Styles/newNotice.css'
 import {CKEditor} from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
@@ -53,6 +52,18 @@ return (
                 </span>
                 
             </FormGroup>
+
+            <FormGroup>
+                <Label htmlFor="caption"><b>Subtitulo: </b></Label>
+                <input type="text" name="caption" 
+                    {...register( 'caption' ,{required: {value: true, message: "Este campo en Necesario"}})} 
+                />
+                <br/>
+                <span className="text-danger">
+                    {errors.caption && errors.caption.message}
+                </span>
+                
+            </FormGroup>
     
             <FormGroup>
 
@@ -93,7 +104,7 @@ return (
                 <input 
                     hidden
                     defaultValue={state.comunityCustomButton.comunityId} 
-                    {...register('comunityId')} 
+                    {...register('comunityId',{required: {value: true}}) } 
                 />
                 <input name="comunityId" readOnly  defaultValue={state.comunityCustomButton.comunityName}/>
             </FormGroup>

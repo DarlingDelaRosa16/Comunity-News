@@ -38,3 +38,32 @@
     margin: 10px 5px 10px 5px;
     border-radius: 3px;
 }
+
+/*///////////////////////////////////////////////////////
+////////////////////////MEDIA QUERIES////////////////////
+////////////////////////////////////////////////////////*/
+
+@media(max-width: 770px){
+    #fullContainer{
+        width: 100%;
+        margin-left: 0;
+    }
+}  
+
+@media(max-width: 685px){
+    #containerNews{
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+@media(max-width: 480px){
+    #containerTopics{
+        grid-column: 1/5;
+        min-height: 280px;
+    }
+    #containerAside{
+        grid-column: 1/5;
+        min-height: 180px;
+    }
+}

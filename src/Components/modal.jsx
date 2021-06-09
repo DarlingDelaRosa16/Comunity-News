@@ -1,6 +1,5 @@
 import React, { useState, useContext} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import '../Styles/modal.css'
 import CategoryContext from '../Contexs/categoryContext'
 import Login from './login'
 import { types } from '../Contexs/storeReducer';

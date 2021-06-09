@@ -12,11 +12,9 @@ import '../Styles/slider.css'
 import CategoryContext from '../Contexs/categoryContext';
 
 const Slider = () => {
-
-  
   const [state, /*dispatch*/] = useContext(CategoryContext)  
 
-  const dataBaseInfo = useFetchGet(`http://localhost:3000/sliderImages?categoryId=${state.categoryCustomButton.categoryId}`)
+  const dataBaseInfo = useFetchGet(`http://localhost:3000/notices?categoryId=${state.categoryCustomButton.categoryId}&&_limit=4`)
   const items = dataBaseInfo
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,8 +47,8 @@ const Slider = () => {
         onExited={() => setAnimating(false)}
         key={item.id}
       >
-        <img src={item.src}  style={styleImg} alt={item.altText} width="98%" height="300px" className="mt-2 mx-2 rounded"/>
-        <CarouselCaption className="TextInSlider" captionText={item.title} captionHeader={item.caption} />
+        <img id="imgSider" src={item.img}  style={styleImg} alt={item.altText} width="100%" height="300px" className=" rounded"/>
+        <CarouselCaption className="TextInSlider" captionText={item.caption} captionHeader={item.title} />
       </CarouselItem>
     );
   });

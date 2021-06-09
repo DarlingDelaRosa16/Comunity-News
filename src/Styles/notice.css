@@ -5,6 +5,10 @@
 #noticeImg{
     width: 100%;
     height: 450px;
+    background-repeat: 'no-repeat';
+    background-size: cover;
+    background-position-y: -100px;
+    background-attachment: fixed;
 }
 #infoContainer{
     display: grid;
@@ -35,4 +39,40 @@
 #dataNotice{
     text-align: right;
     color: grey;
+}
+
+/*///////////////////////////////////////////////////////
+////////////////////////MEDIA QUERIES////////////////////
+////////////////////////////////////////////////////////*/
+
+@media(max-width: 770px){
+    .noticeInfo{
+        grid-column: 1/5;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    
+    .noticePublicity{
+        grid-column: 1/5;
+        margin: 5px;
+        border-radius: 3px;   
+        margin-bottom: 20px;
+    }
+}  
+@media(max-width: 770px){
+    #noticeImg{
+        background-attachment:none;
+        background-size:initial;
+        background-position-y: -20px;
+        background-position-x: -140px;
+    }
+}
+@media(min-width: 1023px){
+    #noticeImg{
+        background-attachment:none;
+        background-size:initial;
+        background-position-y: -20px;
+        background-position-x: -140px;
+    }
 }
