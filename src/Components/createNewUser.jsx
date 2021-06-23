@@ -17,7 +17,7 @@ const CreateNewUser = () => {
                 },
                 {
                     idKey: 2,
-                    nameForm:"last_name",
+                    nameForm:"lastName",
                     placeholderForm: "Primer Apellido",
                     typeForm: "text",
                     labelForm: "Apellido",
@@ -26,7 +26,7 @@ const CreateNewUser = () => {
                 },
                 {
                     idKey: 3,
-                    nameForm:"user",
+                    nameForm:"userName",
                     placeholderForm: "Nombre de Usuario",
                     typeForm: "text",
                     labelForm: "Usuario",
@@ -52,7 +52,7 @@ const CreateNewUser = () => {
             }
             customUrl={
                 {
-                    url: "http://localhost:3000/users"
+                    url: "http://localhost:3001/user"
                 }
             }
             />

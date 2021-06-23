@@ -18,7 +18,7 @@ const NewNotice = () => {
         let des = {description : textData}
         let newsData = {...des, ...data}
 
-        await axios.post('http://localhost:3000/notices', newsData )
+        await axios.post('http://localhost:3001/news', newsData )
         .then(res =>{
             if(res.status === 200 || res.status === 201){
                 let asnwer = ["La nueva noticia fue guardada correctamente", "success"]
@@ -76,17 +76,6 @@ return (
                     {errors.img && errors.img.message}
                 </span>
 
-            </FormGroup>
-
-            <FormGroup>
-                <Label htmlFor="date"><b>Fecha: </b></Label>
-                <input 
-                    name="date"
-                    type="text"
-                    defaultValue={new Date()} 
-                    readOnly 
-                    {...register('date')} 
-                />
             </FormGroup>
 
             <FormGroup>

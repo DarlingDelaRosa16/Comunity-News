@@ -9,7 +9,7 @@ const CreateNewCategory = () => {
             <DynamicForm customForm={[
                 {
                     idKey: 1,
-                    nameForm:"name",
+                    nameForm:"categoryName",
                     placeholderForm: "Nombre de nueva categoria",
                     typeForm: "text",
                     labelForm: "Categoria",
@@ -25,7 +25,7 @@ const CreateNewCategory = () => {
             }
             customUrl={
                 {
-                    url: "http://localhost:3000/category"
+                    url: "http://localhost:3001/category"
                 }
             }
             />

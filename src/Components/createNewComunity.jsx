@@ -21,7 +21,7 @@ const CreateNewComunity = () => {
             <DynamicForm customForm={[
                 {
                     idKey: 1,
-                    nameForm:"name",
+                    nameForm:"comunityName",
                     placeholderForm: "Nombre de la comunidad",
                     typeForm: "text",
                     labelForm: "Comunidad",
@@ -47,7 +47,7 @@ const CreateNewComunity = () => {
             }
             customUrl={
                 {
-                    url: "http://localhost:3000/comunities"
+                    url: "http://localhost:3001/comunity"
                 }
             }
             />

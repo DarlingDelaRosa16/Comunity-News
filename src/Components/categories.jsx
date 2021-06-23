@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import useFetchGet from '../Hooks/useFetchGet'
 import { Button } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -10,14 +10,18 @@ import { types } from '../Contexs/storeReducer'
 //import {faGamepad, faJournalWhills, faFutbol} from '@fortawesome/free-solid-svg-icons'
 
 const Categories = () => {
-    const dataBaseInfo = useFetchGet(`http://localhost:3000/Category`);
-    
+
+    const dataBaseInfo = useFetchGet(`http://localhost:3001/category`);
+
+    var DataFromDB = []
+    if (dataBaseInfo.items !== undefined) DataFromDB = [...dataBaseInfo.items]
+    console.log(DataFromDB)
     const [/*state*/, dispatch] = useContext(CategoryContext)  
     
     return (
         <div className="containerSections">
             {
-                dataBaseInfo.map(item => (
+                DataFromDB.map(item => (
                     <Button 
                         onClick={()=> dispatch(
                             {
@@ -29,7 +33,7 @@ const Categories = () => {
                             })
 
                         )} 
-                        key={item.id} className="btnAnimation"> {item.name}
+                        key={item.id} className="btnAnimation"> {item.categoryName}
                     </Button>
                 )) 
             }
