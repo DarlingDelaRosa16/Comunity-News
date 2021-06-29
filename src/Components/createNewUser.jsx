@@ -1,11 +1,11 @@
 import React from 'react'
-import DynamicForm from './dynamicForm'
+import DynamicFormText from '../Hooks/dynamicFormText'
 
 const CreateNewUser = () => {
     return (
         <div> 
             <h5 className="mb-3" >Nuevo Periodista</h5> 
-            <DynamicForm customForm={[
+            <DynamicFormText customForm={[
                 {
                     idKey: 1,
                     nameForm:"name",

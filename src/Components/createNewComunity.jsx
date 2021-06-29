@@ -1,56 +1,47 @@
 import React from 'react'
-import DynamicForm from './dynamicForm'
+import DynamicFormSelect from '../Hooks/dynamicFormSelect'
 import useFetchGet from '../Hooks/useFetchGet'
 import "../Styles/createNewComunity.css"
 
 const CreateNewComunity = () => {
 
-    const dataBaseInfo = useFetchGet(`http://localhost:3000/Category`)
+    const dataBaseInfo = useFetchGet(`http://localhost:3001/category`)
+  
+    var dataFromDB = []
+    if (dataBaseInfo.items !== undefined){
+        const queso = ()=>{
+        for( let items of dataBaseInfo.items ){
+            dataFromDB.push({id: items._id, name: items.categoryName})
+        }}
+        queso()
+    }
 
     return (
         <div>
-            <h5 className="mb-3" >Nueva Comunidad</h5>
-            <div id="boxCategories">
-            <h6>Categorias existentes</h6>  
-                <ul>
-                    {dataBaseInfo.map(item => (
-                        <li key={item.id}>{item.id}-{item.name}</li>
-                    ))}
-                </ul>
-            </div>
-            <DynamicForm customForm={[
-                {
-                    idKey: 1,
-                    nameForm:"comunityName",
-                    placeholderForm: "Nombre de la comunidad",
-                    typeForm: "text",
-                    labelForm: "Comunidad",
-                    isValueRequirement: true,
-                    onlyRead: false
-                },
-                {
-                    idKey: 2,
-                    nameForm:"categoryId",
-                    placeholderForm: "Categoria Perteneciente",
-                    typeForm: "text",
-                    labelForm: "Numero de Categoria",
-                    isValueRequirement: true,
-                    onlyRead: false
-                }
-                
-            ]} 
-            customButton={
-                {
-                    typeButtonForm: "submit",
-                    contentButton: "Confirmar"
-                }
+            { 
+                <DynamicFormSelect
+                    customUrl={
+                        {
+                            url: "http://localhost:3001/comunity"
+                        }
+                    }
+                    customButton={
+                        {
+                            typeButtonForm: "submit",
+                            contentButton: "Confirmar"
+                        }
+                    }                                    
+                    infoFormSelect={{
+                        idKey: 1,
+                        nameForm:"categoryId",
+                        typeForm: "select",
+                        labelForm: "Categoria",
+                        isValueRequirement: true
+                    }}
+                    optionsFromSelect={dataFromDB}
+            
+                /> 
             }
-            customUrl={
-                {
-                    url: "http://localhost:3001/comunity"
-                }
-            }
-            />
         </div>
     );
 }

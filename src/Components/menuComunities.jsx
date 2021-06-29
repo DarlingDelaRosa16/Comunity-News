@@ -8,12 +8,17 @@ import { types } from '../Contexs/storeReducer'
 const MenuComunities = () => { 
 
     const [state, dispatch] = useContext(CategoryContext)
-    const dataBaseInfo = useFetchGet(`http://localhost:3000/Comunities?categoryId=${state.categoryCustomButton.categoryId}`)
-   
+    const dataBaseInfo = useFetchGet(`http://localhost:3001/comunity`)
+    console.log(dataBaseInfo)
+
+    var dataFromDB = []
+    if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items]
+    
+    //http://localhost:3000/Comunities?categoryId=${state.categoryCustomButton.categoryId}
     return (
         <div id="containerMenuComunities">
             {
-                dataBaseInfo.map(item => (
+                dataFromDB.map(item => (
                     <Button 
                         onClick={()=> dispatch({
                             type: types.comunityChange,
@@ -21,7 +26,7 @@ const MenuComunities = () => {
                         })}
                         key={item.id} className="btn btn-dark col-auto" 
                     >
-                        {item.name}
+                        {item.comunityName}
                     </Button>
                 ))
             }
