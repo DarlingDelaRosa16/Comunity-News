@@ -7,8 +7,8 @@ const types = {
 
 const initialStore = {
     categoryCustomButton:{
-        categoryId: 1,
-        categoryName: "Video games"
+        categoryId: "60d2a0285491222b8c757025",
+        categoryName: "Programacion"
     },
     comunityCustomButton:{
         comunityId: null,

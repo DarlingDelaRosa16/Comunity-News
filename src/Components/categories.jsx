@@ -26,7 +26,7 @@ const Categories = () => {
                         onClick={()=> dispatch(
                             {
                                 type: types.categoryChange, 
-                                changedCategory: { categoryId: item.id, categoryName: item.categoryName}
+                                changedCategory: { categoryId: item._id, categoryName: item.categoryName}
                             }, dispatch({
                                 type: types.comunityChange,
                                 changedComunity: { comunityId: null, comunityName: null}
