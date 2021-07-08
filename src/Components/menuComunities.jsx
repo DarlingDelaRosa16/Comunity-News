@@ -9,12 +9,9 @@ const MenuComunities = () => {
 
     const [state, dispatch] = useContext(CategoryContext)
     const dataBaseInfo = useFetchGet(`http://localhost:3001/especificComunity/${state.categoryCustomButton.categoryId}`)
-    //console.log(state.categoryCustomButton.categoryId)
-    console.log(dataBaseInfo)
+    
     var dataFromDB = []
     if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items]
-    console.log(dataFromDB)
-    //http://localhost:3000/Comunities?categoryId=${state.categoryCustomButton.categoryId}
     
     return (
         <div id="containerMenuComunities">

@@ -8,8 +8,8 @@ import Parse from 'html-react-parser'
 const Notice = () => {
 
     const {id} = useParams()
-    const dataBaseInfo = useFetchGet(`http://localhost:3000/notices/${id}`)
-    
+    const dataBaseInfo = useFetchGet(`http://localhost:3000/comunityNews/${id}`)
+    console.log(id)
     return (
         <div id="noticeFullContainer">
             <div 

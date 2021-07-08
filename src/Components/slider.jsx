@@ -14,8 +14,11 @@ import CategoryContext from '../Contexs/categoryContext';
 const Slider = () => {
   const [state, /*dispatch*/] = useContext(CategoryContext)  
 
-  const dataBaseInfo = useFetchGet(`http://localhost:3000/notices?categoryId=${state.categoryCustomButton.categoryId}&&_limit=4`)
-  const items = dataBaseInfo
+  const dataBaseInfo = useFetchGet(`http://localhost:3001/categoryNews/${state.categoryCustomButton.categoryId}`)
+
+  var dataFromDB = []
+  if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items.docs]
+  const items = dataFromDB
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);

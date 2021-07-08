@@ -13,20 +13,22 @@ const News = () => {
 
   var urlRequest = '';
   if(state.comunityCustomButton.comunityId === null){
-    urlRequest = `http://localhost:3000/notices?categoryId=${state.categoryCustomButton.categoryId}`
+    urlRequest = `http://localhost:3001/categoryNews/${state.categoryCustomButton.categoryId}`
   }else{
-    urlRequest = `http://localhost:3000/notices?comunityId=${state.comunityCustomButton.comunityId}`
+    urlRequest = `http://localhost:3001/comunityNews/${state.comunityCustomButton.comunityId}`
   }
 
   const dataBaseInfo = useFetchGet(urlRequest)
-
+  var dataFromDB = []
+  if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items.docs]
+ 
   return ( 
     <div>
       {
-        dataBaseInfo.map(item => (
+        dataFromDB.map(item => (
           <Link 
-            to={`/notice/${item.id}`} 
-            key={item.id}
+            to={`/notice/${item._id}`} 
+            key={item._id}
             style={{textDecoration: 'none', color: 'black'}}
           >
             <Card className="cardNews" >
