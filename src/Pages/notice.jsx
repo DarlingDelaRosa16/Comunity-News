@@ -8,21 +8,22 @@ import Parse from 'html-react-parser'
 const Notice = () => {
 
     const {id} = useParams()
-    const dataBaseInfo = useFetchGet(`http://localhost:3000/comunityNews/${id}`)
-    console.log(id)
+    const dataBaseInfo = useFetchGet(`http://localhost:3001/detailsNews/${id}`)
+    const details = dataBaseInfo.items
+    
     return (
         <div id="noticeFullContainer">
             <div 
                 id="noticeImg" 
-                style={{ backgroundImage: `url(${dataBaseInfo.img})` }}>
+                style={{ backgroundImage: `url(${details.img})` }}>
             </div>
             
             <div id="infoContainer">
 
                 <div className="noticeInfo" >
-                    <div className="mb-3"> <h3>{dataBaseInfo.title}</h3> </div>
-                    {Parse("" + dataBaseInfo.description)}
-                    <h6 id="dataNotice">{dataBaseInfo.date} <br /> {dataBaseInfo.journalistName}</h6> 
+                    <div className="mb-3"> <h3>{details.title}</h3> </div>
+                    {Parse("" + details.description)}
+                    <h6 id="dataNotice">{details.createdAt} <br /> {details.journalistName}</h6> 
                 </div>
 
                 <div className="noticePublicity"> 
