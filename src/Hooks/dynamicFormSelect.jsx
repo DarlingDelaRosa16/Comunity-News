@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form"
 import axios from 'axios'
 
 const DynamicForm = (props) => {
-    
-    console.log(props.optionsFromSelect)
 
     const infoForm = props.infoFormSelect
     const infoButton = props.customButton

@@ -10,7 +10,10 @@ const Notice = () => {
     const {id} = useParams()
     const dataBaseInfo = useFetchGet(`http://localhost:3001/detailsNews/${id}`)
     const details = dataBaseInfo.items
-    
+    console.log(dataBaseInfo)
+    if(dataBaseInfo.length === 0){
+        return (<div></div>)
+    }else{
     return (
         <div id="noticeFullContainer">
             <div 
@@ -33,6 +36,7 @@ const Notice = () => {
             </div>
         </div>
     );
+    }
 }
  
 export default Notice;

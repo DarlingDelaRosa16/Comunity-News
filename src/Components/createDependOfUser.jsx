@@ -8,14 +8,11 @@ import CreateNewComunity from './createNewComunity'
 const CreateDependOfUser = () => {
 
     const [state, /*dispatch*/] = useContext(CategoryContext) 
-
-    if(state.logInUser.id === 1){
+    if(state.logInUser.role === "admin"){
         return ( 
             <div>
-                <CreateNewCategory/>
-                <hr />
-                <CreateNewUser/> 
-                <hr/>
+                <CreateNewCategory/><hr/>
+                <CreateNewUser/><hr/>
                 <CreateNewComunity/>   
             </div>
         )

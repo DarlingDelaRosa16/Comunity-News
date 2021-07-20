@@ -7,8 +7,8 @@ const types = {
 
 const initialStore = {
     categoryCustomButton:{
-        categoryId: "60d2a0285491222b8c757025",
-        categoryName: "Programacion"
+        categoryId: "",
+        categoryName: ""
     },
     comunityCustomButton:{
         comunityId: null,
@@ -18,7 +18,8 @@ const initialStore = {
         id: null,
         user: null,
         name: null,
-        last_name: null
+        last_name: null,
+        role: null
     },
     IsloginValidated:{
         isLogIn: false

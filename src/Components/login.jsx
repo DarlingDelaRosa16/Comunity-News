@@ -10,7 +10,7 @@ const Login = (props) => {
     const [sentenceComfirm, setSentenceConfirm] = useState('')
 
     const [data, setdata] = useState(
-    {   user: "",
+    {   userName: "",
         password: "" 
     })
 
@@ -22,17 +22,18 @@ const Login = (props) => {
     } 
 
     const validationDataUser = async () => {
-
-        await axios(`http://localhost:3000/users`,{params: {user: data.user, password: md5(data.password)}} )
+        await axios.post(`http://localhost:3001/checkUser`, data)
         .then(res => {
-            if (res.data.length > 0) {
+            console.log(res)
+            if (res.data.items !== null) {
                     dispatch({
                         type: types.startSession,
                         enteringTheSession: {
-                            user: res.data[0].user,
-                            id: res.data[0].id,
-                            name: res.data[0].name,
-                            last_name: res.data[0].last_name
+                            user: res.data.items.userName,
+                            id: res.data.items._id,
+                            name: res.data.items.name,
+                            role: res.data.items.role,
+                            last_name: res.data.items.lastName
                         }
                     },dispatch({
                           type: types.comfirmButtonModalLogin,
@@ -68,7 +69,7 @@ const Login = (props) => {
                         className="form-control "
                         type="text"
                         placeholder="Username"
-                        name="user"
+                        name="userName"
                         onChange={handleInputChange}
                     />
                 </div>

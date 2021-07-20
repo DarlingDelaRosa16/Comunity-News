@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../Styles/categories.css'
 import CategoryContext from '../Contexs/categoryContext'
 import { types } from '../Contexs/storeReducer'
+
 //import { CategoryProvider } from '../Contexs/categoryContext'
 //import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 //import {faGamepad, faJournalWhills, faFutbol} from '@fortawesome/free-solid-svg-icons'
