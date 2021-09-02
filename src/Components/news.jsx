@@ -13,9 +13,9 @@ const News = () => {
 
   var urlRequest = '';
   if(state.comunityCustomButton.comunityId === null){
-    urlRequest = `http://localhost:3001/categoryNews/${state.categoryCustomButton.categoryId}`
+    urlRequest = `https://comunity-news.herokuapp.com/categoryNews/${state.categoryCustomButton.categoryId}`
   }else{
-    urlRequest = `http://localhost:3001/comunityNews/${state.comunityCustomButton.comunityId}`
+    urlRequest = `https://comunity-news.herokuapp.com/comunityNews/${state.comunityCustomButton.comunityId}`
   }
 
   const dataBaseInfo = useFetchGet(urlRequest)

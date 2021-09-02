@@ -52,7 +52,7 @@ const CreateNewUser = () => {
             }
             customUrl={
                 {
-                    url: "http://localhost:3001/user"
+                    url: "https://comunity-news.herokuapp.com/user"
                 }
             }
             />

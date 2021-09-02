@@ -18,7 +18,7 @@ const NewNotice = () => {
         let des = {description : textData}
         let newsData = {...des, ...data}
 
-        await axios.post('http://localhost:3001/news', newsData )
+        await axios.post('https://comunity-news.herokuapp.com/news', newsData )
         .then(res =>{
             if(res.status === 200 || res.status === 201){
                 let asnwer = ["La nueva noticia fue guardada correctamente", "success"]

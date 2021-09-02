@@ -14,7 +14,7 @@ import CategoryContext from '../Contexs/categoryContext';
 const Slider = () => {
   const [state, /*dispatch*/] = useContext(CategoryContext)  
 
-  const dataBaseInfo = useFetchGet(`http://localhost:3001/categoryNews/${state.categoryCustomButton.categoryId}`)
+  const dataBaseInfo = useFetchGet(`https://comunity-news.herokuapp.com/categoryNews/${state.categoryCustomButton.categoryId}`)
 
   var dataFromDB = []
   if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items.docs]

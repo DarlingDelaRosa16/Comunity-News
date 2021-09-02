@@ -8,7 +8,7 @@ import { types } from '../Contexs/storeReducer'
 const MenuComunities = () => { 
 
     const [state, dispatch] = useContext(CategoryContext)
-    const dataBaseInfo = useFetchGet(`http://localhost:3001/especificComunity/${state.categoryCustomButton.categoryId}`)
+    const dataBaseInfo = useFetchGet(`https://comunity-news.herokuapp.com/especificComunity/${state.categoryCustomButton.categoryId}`)
     
     var dataFromDB = []
     if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items]

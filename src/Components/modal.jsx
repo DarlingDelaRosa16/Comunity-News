@@ -32,7 +32,7 @@ const ModalInfo = () => {
 
   return (
     <div>
-      <Button onClick={toggle}>Crear Noticia</Button>
+      <Button onClick={toggle}>Crear contenido</Button>
 
       <Modal isOpen={modal} toggle={toggle} >
         <ModalHeader toggle={toggle}>Perfil de Usuario</ModalHeader>

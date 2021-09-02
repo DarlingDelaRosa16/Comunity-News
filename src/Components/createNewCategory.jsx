@@ -25,7 +25,7 @@ const CreateNewCategory = () => {
             }
             customUrl={
                 {
-                    url: "http://localhost:3001/category"
+                    url: "https://comunity-news.herokuapp.com/category"
                 }
             }
             />

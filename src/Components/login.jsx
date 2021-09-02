@@ -2,7 +2,6 @@ import {React, useState, useContext} from 'react'
 import CategoryContext from '../Contexs/categoryContext'
 import axios from 'axios'
 import { types } from '../Contexs/storeReducer'
-import md5 from 'md5'
 
 const Login = (props) => {
 
@@ -22,7 +21,7 @@ const Login = (props) => {
     } 
 
     const validationDataUser = async () => {
-        await axios.post(`http://localhost:3001/checkUser`, data)
+        await axios.post(`https://comunity-news.herokuapp.com/checkUser`, data)
         .then(res => {
             console.log(res)
             if (res.data.items !== null) {

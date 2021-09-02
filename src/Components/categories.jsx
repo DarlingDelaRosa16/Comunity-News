@@ -6,13 +6,9 @@ import '../Styles/categories.css'
 import CategoryContext from '../Contexs/categoryContext'
 import { types } from '../Contexs/storeReducer'
 
-//import { CategoryProvider } from '../Contexs/categoryContext'
-//import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-//import {faGamepad, faJournalWhills, faFutbol} from '@fortawesome/free-solid-svg-icons'
-
 const Categories = () => {
 
-    const dataBaseInfo = useFetchGet(`http://localhost:3001/category`);
+    const dataBaseInfo = useFetchGet(`https://comunity-news.herokuapp.com/category`);
 
     var dataFromDB = []
     if (dataBaseInfo.items !== undefined) dataFromDB = [...dataBaseInfo.items]
@@ -43,5 +39,3 @@ const Categories = () => {
     );
 }
 export default Categories;
-
-/*<FontAwesomeIcon icon={faGamepad} />{' '}*/

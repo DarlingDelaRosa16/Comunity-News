@@ -5,7 +5,7 @@ import "../Styles/createNewComunity.css"
 
 const CreateNewComunity = () => {
 
-    const dataBaseInfo = useFetchGet(`http://localhost:3001/category`)
+    const dataBaseInfo = useFetchGet(`https://comunity-news.herokuapp.com/category`)
   
     var dataFromDB = []
     if (dataBaseInfo.items !== undefined){
@@ -22,7 +22,7 @@ const CreateNewComunity = () => {
                 <DynamicFormSelect
                     customUrl={
                         {
-                            url: "http://localhost:3001/comunity"
+                            url: "https://comunity-news.herokuapp.com/comunity"
                         }
                     }
                     customButton={
