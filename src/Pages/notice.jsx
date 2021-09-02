@@ -8,7 +8,7 @@ import Parse from 'html-react-parser'
 const Notice = () => {
 
     const {id} = useParams()
-    const dataBaseInfo = useFetchGet(`http://localhost:3001/detailsNews/${id}`)
+    const dataBaseInfo = useFetchGet(`https://comunity-news.herokuapp.com/detailsNews/${id}`)
     const details = dataBaseInfo.items
     console.log(dataBaseInfo)
     if(dataBaseInfo.length === 0){
