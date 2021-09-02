@@ -13,8 +13,3 @@ const CategoryProvider = ( {children} ) => {
 }
 export {CategoryProvider};
 export default CategoryContext;  
-/*
-
-*/
-//export {CategoryProvider} ;
-//const data = cookies.get('categoryContextId')
