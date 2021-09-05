@@ -30,7 +30,7 @@ const Categories = () => {
                             })
 
                         )} 
-                        key={item.id} className="btnAnimation"> {item.categoryName}
+                        key={item._id} className="btnAnimation"> {item.categoryName}
                     </Button>
                 )) 
             }
