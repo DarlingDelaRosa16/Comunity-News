@@ -23,7 +23,6 @@ const Login = (props) => {
     const validationDataUser = async () => {
         await axios.post(`https://comunity-news.herokuapp.com/checkUser`, data)
         .then(res => {
-            console.log(res)
             if (res.data.items !== null) {
                     dispatch({
                         type: types.startSession,
