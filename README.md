@@ -28,12 +28,12 @@ Comunity-app works whit a context so the app changed its state when we press a b
 
 ## Conection to DataBase
 
-The aplication is conect to MongoDbAtlas using the espicific links from Comunity-app-Nodejs.
+The aplication is conect to MongoDbAtlas using the espicific links from [Comunity-app-Nodejs](https://github.com/DarlingDelaRosa16/Comunity-news-Nodejs).
 
 ## Install
 
 You can clone or install this app and get all about front-end, but you need to clone the back-end too for the app works completely.
-The back-end is Comunity-app-Nodejs
+The back-end is [Comunity-app-Nodejs](https://github.com/DarlingDelaRosa16/Comunity-news-Nodejs)
 
 ## Notes
 
