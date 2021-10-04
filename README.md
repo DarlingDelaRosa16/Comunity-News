@@ -15,16 +15,16 @@ Comunity-app works whit a context so the app changed its state when we press a b
 
 ## Tecnologies
 
-HTML, CSS, JS
-React.js
-React Hooks
-Funtional components
-Bootstrap
-React-hook-form
-React-router-dom
-axios
-Reactstrap
-CKEditor
+### HTML, CSS, JS
+### React.js,
+### React Hooks,
+### Funtional components,
+### Bootstrap,
+### React-hook-form,
+### React-router-dom,
+### axios,
+### Reactstrap,
+### CKEditor.
 
 ## Conection to DataBase
 
