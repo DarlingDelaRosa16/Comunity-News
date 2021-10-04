@@ -9,11 +9,11 @@ const CreateNewComunity = () => {
   
     var dataFromDB = []
     if (dataBaseInfo.items !== undefined){
-        const queso = ()=>{
+        const createComunity = ()=>{
         for( let items of dataBaseInfo.items ){
             dataFromDB.push({id: items._id, name: items.categoryName})
         }}
-        queso()
+        createComunity()
     }
 
     return (
